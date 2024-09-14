@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Login from './Component/Login';
+import ShortenerForm from './Component/ShortenerForm';
+import Signup from './Component/SignUp';
+import ResetPassword from './Component/ResetPassword';
+import ForgotPassword from './Component/ForgotPassword';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        {/* Default route to redirect to login */}
+        <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/shortenerform" element={<ShortenerForm />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="//reset-password/:token" element={<ResetPassword />} />
+        <Route path="/ForgotPassword" element={<ForgotPassword />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
