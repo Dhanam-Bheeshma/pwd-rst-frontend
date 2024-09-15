@@ -25,6 +25,7 @@
     "url": "^0.11.4",
     "util": "^0.12.5",
     "web-vitals": "^2.1.4"
+    "@babel/plugin-proposal-private-property-in-object": "^4.5.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -44,10 +45,7 @@
       "not dead",
       "not op_mini all"
     ],
-    "devDependencies": {
-  "@babel/plugin-proposal-private-property-in-object": "^4.5.0"
-}
-    "development": [
+  "development": [
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
